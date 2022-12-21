@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>com.github.BlueDriver.idea.plugin.CheckingBracketPair</id>
+    <name>CheckingBracketPair</name>
+    <version>1.0.0</version>
+    <vendor email="cpwu@foxmail.com" url="https://github.com/BlueDriver">BlueDriver</vendor>
+
+    <description><![CDATA[
+      Check whether the brackets([] or {}) in the string literal code are paired and remind you to modify.<br>
+
+
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+        <!--Add change notes here.<br>-->
+        <!--<em>most HTML tags may be used</em>-->
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <annotator language="JAVA" implementationClass="com.github.cpwu.cbp.CheckingBracketPairAnnotator"/>
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
